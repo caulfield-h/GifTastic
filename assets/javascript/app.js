@@ -2,22 +2,22 @@ var subjects = ["Elliot Alderson", "Angela Moss", "Darlene Alderson", "White Ros
 
 var button;
 var chooseTopic = "";
-
+// LOOP GENERATING NEW BUTTONS
 var buttonLoop = function() {
     $("#buttonZone").empty();
     for (i = 0; i < subjects.length; i++) {
-        button = $("<button type=" + "button" + ">" + subjects[i] + "</button>").addClass("btn btn-info").attr("data", subjects[i]);
+        button = $("<button type=" + "button" + ">" + subjects[i] + "</button>").addClass("btn btn-secondary").attr("data", subjects[i]);
         $("#buttonZone").append(button);
     };
 }
 
-
+// GIPHY API AND KEY
 $("#buttonZone").on("click", ".btn", function() {
     var genItem = $(this).attr("data");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + genItem + "&api_key=kIkDXFuikhFIeluwIapRNKUq0Q035T8h&limit=10";
 
 
-
+    // AJAX PORTION
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -49,7 +49,7 @@ $("#buttonZone").on("click", ".btn", function() {
     })
 })
 
-
+// Gif Animation
 $("#gifZone").on("click", ".gif", function(event) {
     event.preventDefault();
 
@@ -67,7 +67,7 @@ $("#gifZone").on("click", ".gif", function(event) {
 
 
 
-
+// SUBMIT FORM FOR NEW GIFS
 $(".submit").on("click", function(event) {
     event.preventDefault();
 

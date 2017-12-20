@@ -15,12 +15,12 @@ body {
 }
 
 #header {
-    background-color: black;
+    background-color: #bcd5d1;
     height: 70px;
 }
 
 #title {
-    color: #fff;
+    color: #1d2120;
     text-align: center;
     font-family: 'Bungee', cursive;
     padding-top: 14px;
@@ -56,7 +56,7 @@ body {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background-color: black;
+    background-color: #ba9077;
 }
 
 .clear {
